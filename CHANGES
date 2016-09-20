@@ -10,3 +10,7 @@ Added missing import ImproperlyConfigured
 -----
 Changed mimetype to content_type to work with Django 1.7
 
+0.1.4
+-----
+Fork from https://github.com/RacingTadpole/django-private-media.git
+Version bump for the addition of NginxXAccelRedirectServer
