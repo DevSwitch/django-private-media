@@ -8,7 +8,10 @@ import os
 class NginxXAccelRedirectServer(object):
     def serve(self, request, path):
         response = HttpResponse()
-        fullpath = os.path.join(settings.PRIVATE_MEDIA_ROOT, path)
+        # /protected matches the nginx location block
+        # this could be set to a settings variable if needed
+        #fullpath = os.path.join(settings.PRIVATE_MEDIA_ROOT, path)
+        fullpath = os.path.join('/protected', path)
         response['X-Accel-Redirect'] = fullpath
         response['Content-Type'] = mimetypes.guess_type(path)[0] or 'application/octet-stream'
         return response

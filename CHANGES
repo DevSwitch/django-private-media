@@ -14,3 +14,4 @@ Changed mimetype to content_type to work with Django 1.7
 -----
 Fork from https://github.com/RacingTadpole/django-private-media.git
 Version bump for the addition of NginxXAccelRedirectServer
+Fix path supplied to the NginXAccell class see servers.py
